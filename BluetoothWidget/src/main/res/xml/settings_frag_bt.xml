@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android">
+  	<CheckBoxPreference
+		android:key="settings_bt_enabled"
+		android:title="@string/settings_bt_enabled_title"
+		android:summary="@string/settings_bt_enabled_summary_ena" />
+  	<CheckBoxPreference
+		android:key="settings_bt_auto_on_adapter_on"
+		android:title="@string/settings_bt_auto_on_adapter_on_title"
+		android:summary="@string/settings_bt_auto_on_adapter_on_summary_ena" />
+  								  		
+</PreferenceScreen>

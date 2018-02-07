@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp" >
+    
+    <ListView
+        android:id="@+id/activity_main_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ToggleButton
+            android:id="@+id/activity_main_wifi_tether"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+            android:gravity="center_horizontal|center_vertical"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textOff="@string/msgs_main_config_wifi_tether"
+            android:textOn="@string/msgs_main_config_wifi_tether" />
+
+        <ToggleButton
+            android:id="@+id/activity_main_bluetooth_tether"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+            android:gravity="center_horizontal|center_vertical"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textOff="@string/msgs_main_config_bluetooth_tether"
+            android:textOn="@string/msgs_main_config_bluetooth_tether" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/activity_main_show_tethering_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/msgs_main_config_show_tether_menu" />
+    
+</LinearLayout>

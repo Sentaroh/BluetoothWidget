@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="msgs_widget_a2dp">Audio(A2DP)</string>
+    
+    <string name="msgs_a2dp_config_message"
+        >接続するオーディオ装置を指定してください。</string>
+    <string name="msgs_a2dp_config_no_device_found"
+        >オーディオ装置が定義されていません。Bluetoothの設定で装置をペアリングしてください。</string>
+    <string name="msgs_a2dp_config_disable_bt_adapter"
+        >Bluetoothアダプターがオフのため装置名を取得できませんでした。</string>
+    
+    <string name="msgs_a2dp_config_auto_connect_adapter_on"
+        >Bluetoothアダプターがオンになったら選択したオーディオ装置を自動接続する</string>
+    
+</resources>

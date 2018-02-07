@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_main_title">Bluetooth Widgetの設定</string>
+    <string name="settings_main_widget_title">ウィジェット設定</string>
+    <string name="settings_main_bt_title">Bluetoothテザリングの設定</string>
+    <string name="settings_main_misc_title">その他</string>
+    
+    <string name="settings_default_current_setting">現設定=</string>
+
+    <string name="settings_widget_pan_auto_on_adapter_off_title"
+        >テザリング接続アダプターオン</string>
+	<string name="settings_widget_pan_auto_on_adapter_off_summary_ena"
+	    >Bluetoothアダプターがオフの時にテザリング装置への接続が開始されたときは、Bluetoothアダプターをオンにする。</string>
+	<string name="settings_widget_pan_auto_on_adapter_off"
+	    >settings_widget_pan_auto_on_adapter_off</string>
+    
+    <string name="settings_widget_pan_auto_disc_screen_locked_title"
+        >スクリーンロック時のテザリング接続</string>
+	<string name="settings_widget_pan_auto_disc_screen_locked_summary_ena"
+	    >スクリーンがロックされたらテザリング機器を切断する。</string>
+	<string name="settings_widget_pan_auto_disc_screen_locked"
+	    >settings_widget_pan_auto_disc_screen_locked</string>
+
+	<string name="settings_widget_a2dp_auto_on_adapter_off_title"
+	    >オーディオ接続アダプターオン</string>
+	<string name="settings_widget_a2dp_auto_on_adapter_off_summary_ena"
+	    >Bluetoothアダプターがオフの時にオーディオ装置への接続が開始されたときは、Bluetoothアダプターをオンにする。</string>
+	<string name="settings_widget_a2dp_auto_on_adapter_off"
+	    >settings_widget_a2dp_auto_on_adapter_off</string>
+    
+    <string name="settings_widget_a2dp_auto_disc_screen_locked_title"
+        >スクリーンロック時のオーディオ接続</string>
+	<string name="settings_widget_a2dp_auto_disc_screen_locked_summary_ena"
+	    >スクリーンがロックされたらオーディオ機器を切断する。</string>
+	<string name="settings_widget_a2dp_auto_disc_screen_locked"
+	    >settings_widget_a2dp_auto_disc_screen_locked</string>
+			
+	<string name="settings_widget_a2dp_auto_disc_time_unplaying_title"
+	    >オーディオ無再生時の接続切断</string>
+	<string name="settings_widget_a2dp_auto_disc_time_unplaying_summary_ena"
+	    >無再生時間が%s分連続したらオーディオ機器を切断する。</string>
+	<string name="settings_widget_a2dp_auto_disc_time_unplaying_summary_dis"
+	    >オーディオ機器を切断しない。</string>
+	<string name="settings_widget_a2dp_auto_disc_time_unplaying_dialog_title"
+	    >無再生時間の選択</string>
+	<string name="settings_widget_a2dp_auto_disc_time_unplaying"
+	    >settings_widget_a2dp_auto_disc_time_unplaying</string>
+	<string-array name="settings_widget_a2dp_auto_disc_time_unplaying_list_entries">
+        <item>無し</item>
+        <item>1分</item>
+        <item>3分</item>
+        <item>5分</item>
+    </string-array>
+    <string-array name="settings_widget_a2dp_auto_disc_time_unplaying_list_values">
+        <item>0</item>
+        <item>1</item>
+        <item>3</item>
+        <item>5</item>
+    </string-array>
+		
+	<string name="settings_bt_enabled_title"
+	    >Bluetoothテザリング有効</string>
+	<string name="settings_bt_enabled_summary_ena"
+	    >Bluetoothテザリングを有効にする。</string>
+	<string name="settings_bt_enabled">settings_bt_enabled</string>
+
+	<string name="settings_bt_auto_on_adapter_on_title"
+	    >Bluetoothアダプターオン</string>
+	<string name="settings_bt_auto_on_adapter_on_summary_ena"
+	    >BluetoothアダプターがオンになったらBluetoothテザリングを有効にする。</string>
+	<string name="settings_bt_auto_on_adapter_on">settings_bt_auto_on_adapter_on</string>
+			
+    <string name="settings_logging_enabled_title">ログ記録</string>
+	<string name="settings_logging_enabled_summary_ena">ログ記録を有効にする。</string>
+	<string name="settings_logging_enabled">settings_logging_enabled</string>
+
+    <string name="settings_debug_level_title">デバッグ情報レベル</string>
+	<string name="settings_debug_level_summary">デバッグ情報レベル=0</string>
+	<string name="settings_debug_level_dialog_title">デバッグ情報レベルの選択</string>
+	<string name="settings_debug_level">settings_debug_level</string>
+	<string-array name="settings_debug_level_list_entries">
+        <item>0:無し</item>
+        <item>1:最小限の情報</item>
+        <item>2:詳細情報</item>
+    </string-array>
+    <string-array name="settings_debug_level_list_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+		
+    <string name="settings_exit_cleanly_title">アプリケーション終了時のオプション</string>
+	<string name="settings_exit_cleanly_summary_ena">アプリケーション終了時にプロセスをKillする</string>
+	<string name="settings_exit_cleanly">settings_exit_cleanly</string>
+		
+</resources>

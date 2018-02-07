@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <string name="msgs_invoke_tether_config_title">テザリング設定</string>
+    
+    <string name="msgs_invoke_tether_config_tether_not_available"
+        >テザリングがサポートされていないため、テザリング設定を呼び出せません</string>
+    
+</resources>

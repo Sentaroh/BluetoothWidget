@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp" >
+
+    <TextView
+        android:id="@+id/a2dp_config_activity_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/msgs_pan_config_message"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ListView
+        android:id="@+id/a2dp_config_activity_device_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+    </ListView>
+
+    <CheckedTextView
+        android:id="@+id/a2dp_config_activity_auto_connect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:gravity="center_vertical"
+        android:text="@string/msgs_a2dp_config_auto_connect_adapter_on" />
+
+    <Button
+        android:id="@+id/a2dp_config_activity_btn_on"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/msgs_main_config_on" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/a2dp_config_activity_btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/msgs_main_config_cancel"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/a2dp_config_activity_btn_assign"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/msgs_main_config_ok"
+            tools:ignore="ButtonStyle" />
+    </LinearLayout>
+
+</LinearLayout>

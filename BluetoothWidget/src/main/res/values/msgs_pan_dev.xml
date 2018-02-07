@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="msgs_widget_pan_dev">テザリング接続</string>
+    
+    <string name="msgs_pan_disable_bt_adapter"
+        >Bluetoothアダプターがオフのため装置を接続できません。</string>
+    <string name="msgs_pan_device_not_found"
+        >有効な装置が選択されていないため接続できません。</string>
+    
+    <string name="msgs_pan_config_message"
+        >Bluetoothテザリングに使用する装置を選択してください。</string>
+    <string name="msgs_pan_config_no_device_found"
+        >Bluetoothテザリングに使用する装置が定義されていません。Bluetoothの設定で装置をペアリングしてください。</string>
+    <string name="msgs_pan_config_disable_bt_adapter"
+        >Bluetoothアダプターがオフのため装置名を取得できませんでした。</string>
+    
+    <string name="msgs_pan_turn_off_another_device"
+        >Bluetoothテザリングは複数装置でオンにできません、%s をオフにしてからこの装置をオンにしてください。</string>
+    
+    <string name="msgs_pan_device_disc_error"
+        >Bluetoothテザリング装置が接続解除できませんでした。</string>
+    <string name="msgs_pan_device_conn_error"
+        >Bluetoothテザリング装置を接続できませんでした。現象が続くようならばBluetoothアダプターをオフ・オンしてください。</string>
+    
+    <string name="msgs_pan_device_auto_conn_adapter_on"
+        >Bluetoothアダプターがオンになったら選択した装置に接続する</string>
+    <string name="msgs_pan_device_auto_conn_adapter_on_this_dev"
+        >(現在選択されている装置が接続されます)</string>
+    <string name="msgs_pan_device_auto_conn_adapter_on_another_dev"
+        >(%sが接続されます)</string>
+    <string name="msgs_pan_device_auto_conn_adapter_on_no_dev"
+        >(現在設定されていません)</string>
+</resources>

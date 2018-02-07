@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sentaroh.android.BluetoothWidget">
+
+    <uses-sdk android:minSdkVersion="16"  maxSdkVersion="23"  android:targetSdkVersion="17" />
+    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"></uses-permission>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.WAKE_LOCK"/>
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+	<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/action_bar_icon_bluetooth_widget"
+        android:label="@string/app_name"
+        android:name="GlobalParameters" android:theme="@style/Main">
+        <activity
+            android:name="com.sentaroh.android.BluetoothWidget.Config.ActivityConfigPan"
+            android:label="@string/msgs_widget_pan_dev" 
+            android:launchMode="standard"
+            android:logo="@drawable/pan_on" 
+            android:configChanges="keyboardHidden|orientation|screenLayout|screenSize"
+            android:taskAffinity="com.sentaroh.android.BluetoothWidget.Config.ActivityConfigPan">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+			</intent-filter>            
+        </activity>
+        <activity
+            android:name="com.sentaroh.android.BluetoothWidget.Config.ActivityConfigA2dp"
+            android:label="@string/msgs_widget_a2dp" 
+            android:launchMode="standard"
+            android:logo="@drawable/a2dp_on" 
+            android:configChanges="keyboardHidden|orientation|screenLayout|screenSize"
+            android:taskAffinity="com.sentaroh.android.BluetoothWidget.Config.ActivityConfigA2dp">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+			</intent-filter>            
+        </activity>
+        <activity
+            android:name="com.sentaroh.android.BluetoothWidget.Config.ActivityConfigMain"
+            android:label="@string/msgs_main_title" 
+            android:launchMode="singleTask"
+            android:alwaysRetainTaskState="true" 
+            android:windowSoftInputMode="adjustPan" 
+            android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" 
+            android:taskAffinity="com.sentaroh.android.BluetoothWidget.Config.ActivitySettingMain">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.sentaroh.android.BluetoothWidget.Config.ActivitySettingMain"
+            android:label="@string/settings_main_title" 
+            android:launchMode="standard"
+            android:alwaysRetainTaskState="true" 
+            android:windowSoftInputMode="adjustPan" 
+            android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" 
+            android:taskAffinity="com.sentaroh.android.BluetoothWidget.Config.ActivitySettingMain">
+        </activity>
+   		<service 
+		    android:name=".WidgetService" 
+		    android:exported="false"
+		    android:process=":Svc">
+			<intent-filter>
+				<action android:name="com.sentaroh.android.BluetoothWidget.WIDGET_PAN_DEV_REFRESH" />
+				<action android:name="com.sentaroh.android.BluetoothWidget.HOME_SCREEN_PAN_DEV" />
+				<action android:name="com.sentaroh.android.BluetoothWidget.HOME_SCREEN_PAN_DEV_TOGGLE_BTN" />
+				
+				<action android:name="com.sentaroh.android.BluetoothWidget.WIDGET_A2DP_DEV_REFRESH" />
+				<action android:name="com.sentaroh.android.BluetoothWidget.HOME_SCREEN_A2DP_DEV" />
+				<action android:name="com.sentaroh.android.BluetoothWidget.HOME_SCREEN_A2DP_DEV_TOGGLE_BTN" />
+			    
+				<action android:name="com.sentaroh.android.BluetoothWidget.HOME_SCREEN_ADAPTER" />
+				<action android:name="com.sentaroh.android.BluetoothWidget.HOME_SCREEN_ADAPTER_TOGGLE_BTN" />
+			    
+				<action android:name="com.sentaroh.android.BluetoothWidget.ACTION_SERVICE_HEARTBEAT" />
+			</intent-filter>
+   		</service>
+        <activity 
+	        android:name="com.sentaroh.android.BluetoothWidget.Shortcut.InvokeTetheringConfig"
+            android:label="@string/msgs_invoke_tether_config_title"
+            android:screenOrientation="unspecified"
+            android:launchMode="singleTop"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent"
+            android:taskAffinity=".ShortcutSleep"
+            android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" 
+            android:excludeFromRecents="true">
+   			<intent-filter >
+				<action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity 
+	        android:name="com.sentaroh.android.BluetoothWidget.Shortcut.MakeShortcutInvokeTetheringConfig"
+            android:label="@string/msgs_invoke_tether_config_title"
+            android:exported="true"
+            android:icon="@drawable/tethering_config" 
+            android:excludeFromRecents="true">
+   			<intent-filter>
+		        <action android:name="android.intent.action.CREATE_SHORTCUT" />
+		        <category android:name="android.intent.category.DEFAULT" />
+		    </intent-filter>
+        </activity>
+   				
+        <receiver
+    	    android:name=".WidgetProviderPan"
+    	    android:icon="@drawable/pan_on"
+    	    android:exported="true"
+    	    android:process=":Svc" 
+    	    android:label="@string/msgs_widget_pan_dev">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+			</intent-filter>
+			<meta-data 
+			    android:name="android.appwidget.provider"
+			    android:resource="@xml/widget_pan_dev" />
+		</receiver>
+        <receiver
+    	    android:name=".WidgetProviderA2dp"
+    	    android:icon="@drawable/a2dp_on"
+    	    android:exported="true"
+    	    android:process=":Svc" 
+    	    android:label="@string/msgs_widget_a2dp">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+			</intent-filter>
+			<meta-data 
+			    android:name="android.appwidget.provider"
+			    android:resource="@xml/widget_a2dp_dev" />
+		</receiver>
+        <receiver
+    	    android:name=".WidgetProviderBluetoothAdapter"
+    	    android:icon="@drawable/device_bluetooth_on"
+    	    android:exported="true"
+    	    android:process=":Svc" 
+    	    android:label="@string/msgs_widget_adapter">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+			</intent-filter>
+			<meta-data 
+			    android:name="android.appwidget.provider"
+			    android:resource="@xml/widget_adapter" />
+		</receiver>
+        <receiver 
+    	    android:name=".WidgetServiceReceiver"
+    	    android:icon="@drawable/action_bar_icon_bluetooth_widget" 
+    	    android:label="WidgetServiceReceiver"
+    	    android:process=":Svc" 
+    	    android:exported="true">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+				<action android:name="android.intent.action.ACTION_SHUTDOWN" />
+				<action android:name="android.intent.action.LOCALE_CHANGED" />
+				<!-- 
+				<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+				 -->
+			</intent-filter>
+		</receiver>
+        <receiver 
+    	    android:name="com.sentaroh.android.BluetoothWidget.Log.LogReceiver"
+    	    android:process=":Svc" 
+    	    android:exported="false">
+			<intent-filter>
+			    <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+				<action android:name="com.sentaroh.android.BluetoothWidget.ACTION_LOG_SEND" />
+				<action android:name="com.sentaroh.android.BluetoothWidget.ACTION_LOG_RESET" />
+				<action android:name="com.sentaroh.android.BluetoothWidget.ACTION_LOG_DELETE" />
+				<action android:name="com.sentaroh.android.BluetoothWidget.ACTION_LOG_ROTATE" />
+				<action android:name="com.sentaroh.android.BluetoothWidget.ACTION_LOG_FLUSH" />
+				<action android:name="com.sentaroh.android.BluetoothWidget.ACTION_LOG_CLOSE" />
+			</intent-filter>
+		</receiver>
+        		
+    </application>
+
+</manifest>

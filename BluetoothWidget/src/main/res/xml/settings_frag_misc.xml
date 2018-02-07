@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	  	<CheckBoxPreference
+			android:key="settings_logging_enabled"
+			android:title="@string/settings_logging_enabled_title"
+			android:summary="@string/settings_logging_enabled_summary_ena" />
+   	    <ListPreference
+			android:key="settings_debug_level"
+			android:title="@string/settings_debug_level_title"
+			android:summary="@string/settings_debug_level_summary"
+			android:dialogTitle="@string/settings_debug_level_dialog_title"
+			android:entries="@array/settings_debug_level_list_entries"
+			android:entryValues="@array/settings_debug_level_list_values"/>
+	  		  	
+      	<CheckBoxPreference
+			android:key="settings_exit_cleanly"
+			android:title="@string/settings_exit_cleanly_title"
+			android:summary="@string/settings_exit_cleanly_summary_ena" />
+	  		
+</PreferenceScreen>

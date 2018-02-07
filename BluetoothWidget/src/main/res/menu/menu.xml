@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_browse_log"
+          android:title="@string/msgs_main_menu_browse" 
+          android:icon="@drawable/browse_text"
+          android:showAsAction="always|withText"
+          />
+    <item android:id="@+id/menu_identify"
+          android:title="@string/msgs_main_menu_identify" 
+          android:icon="@android:drawable/ic_menu_search"
+          />
+    <item android:id="@+id/menu_log_management"
+          android:title="@string/msgs_log_file_list_title" 
+          />
+    <item android:id="@+id/menu_settings"
+          android:title="@string/msgs_main_menu_setting" 
+          android:icon="@android:drawable/ic_menu_preferences"
+          android:showAsAction="always|withText"
+          />
+<!--
+    <item android:id="@+id/menu_about"
+          android:title="@string/msgs_pan_dev_menu_about" 
+          android:icon="@+android:drawable/ic_menu_info_details"
+          />
+ -->    
+    
+</menu>

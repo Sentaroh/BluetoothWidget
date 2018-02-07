@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+    <header android:title="@string/settings_main_widget_title"
+        android:fragment="com.sentaroh.android.BluetoothWidget.Config.ActivitySettingMain$SettingsWidget"/>
+    <header android:title="@string/settings_main_bt_title"
+        android:fragment="com.sentaroh.android.BluetoothWidget.Config.ActivitySettingMain$SettingsBt"/>
+    <header android:title="@string/settings_main_misc_title"
+        android:fragment="com.sentaroh.android.BluetoothWidget.Config.ActivitySettingMain$SettingsMisc"/>
+    
+</preference-headers>

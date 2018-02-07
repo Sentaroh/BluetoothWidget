@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="msgs_tether_switch_app_name">Bluetooth widget</string>
+    
+    <string name="msgs_main_title">Bluetooth widget構成</string>
+    <string name="msgs_main_menu_browse">ログ表示</string>
+    <string name="msgs_main_menu_identify">識別</string>
+    <string name="msgs_main_menu_setting">設定</string>
+    <string name="msgs_main_menu_about">Bluetooth widgetについて</string>
+    
+    <string name="msgs_main_bt_adapter_could_not_on"
+        >Bluetoothアダプターをオンにすることができませんでした。</string>
+    <string name="msgs_main_bt_adapter_on_title">Bluetoothアダプターオン</string>
+    <string name="msgs_main_bt_adapter_on_cancel_before">キャンセル</string>
+    <string name="msgs_main_bt_adapter_on_cancel_after">キャンセル中</string>
+    <string name="msgs_main_bt_adapter_on_msg">Bluetoothアダプターをオンにしています</string>
+    <string name="msgs_main_bt_adapter_confirm_on_msg"
+        >Bluetoothアダプターがオフになっています、続行するにはBluetoothアダプターがオンになっている必要があります。Bluetoothアダプターをオンにしますか？</string>
+    
+    <string name="msgs_main_config_on">Bluetoothアダプターをオンにし装置リストを取得する</string>
+    <string name="msgs_main_config_ok">適用</string>
+    <string name="msgs_main_config_cancel">キャンセル</string>
+    
+    <string name="msgs_main_config_show_tether_menu">テザリングメニューの表示</string>
+    <string name="msgs_main_config_wifi_tether">WiFi テザー</string>
+    <string name="msgs_main_config_bluetooth_tether">ブルーツース テザー</string>
+    
+</resources>
